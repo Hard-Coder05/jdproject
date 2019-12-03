@@ -15,17 +15,23 @@
 }
 
 #image{
-    margin-left: 0%;
+    margin-left: 5%;
+    margin-right: auto;
     line-height: 0px;
-    width: 390px;
+    width: 100px;
    
 }
 #image-text{
     text-align: right;
     font-family: fantasy;
     font-size: 18px;
-        margin-right: 20%;
+        margin-right: 49%;
     
+}
+hr{
+    width:90%;
+    color:darkorange;
+    noshade;       
 }
 #form{
     border-radius: 20px;
@@ -45,7 +51,7 @@
 
 
 
-@media screen and (min-width:400px) and (max-width:570px){
+@media screen and (min-width:400px) and (max-width:470px){
     #heading p{
     font-size: 20px; 
     font-family: sans-serif;
@@ -62,16 +68,77 @@
 }
 
 #image{
+    margin-left: 15%;
+    margin-right: auto;
+    line-height: 0px;
+    width: 200px;
+}
+#image-text{
+    text-align: center;
+    font-family: fantasy;
+    font-size: 30;
+        margin-right:1%;
+    
+}
+hr{
+    width:90%;
+    color:darkorange;
+    noshade;       
+}
+#form{
+    border-radius: 20px;
+    padding: 5%;
+    line-height: 23px;
+    background-color: darkorange;
+    margin-top: 0px;
+    margin-right: 20%;
     margin-left: 20%;
+    color: white;
+    font-size: 20px;
+    font-family: cursive
+}
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width:470px) and (max-width:570px){
+    #heading p{
+    font-size: 20px; 
+    font-family: sans-serif;
+    text-align: center;
+    text-transform:capitalize;
+    background-color: darkorange;
+    color: white;
+    border:none;
+    border-radius: 0px;
+    margin:auto;
+}
+#body{
+    background-color:beige
+}
+
+#image{
+    margin-left: 15%;
+    margin-right: auto;
     line-height: 0px;
    
 }
 #image-text{
-    text-align: right;
+    text-align: center;
     font-family: fantasy;
-    font-size: 20;
-        margin-right: 20%;
+    font-size: 30;
+        margin-right:1%;
     
+}
+hr{
+    width:90%;
+    color:darkorange;
+    noshade;       
 }
 #form{
     border-radius: 20px;
@@ -115,8 +182,13 @@
     text-align: right;
     font-family: fantasy;
     font-size: 30;
-        margin-right: 20%;
+        margin-right: 49%;
     
+}
+hr{
+    width:90%;
+    color:darkorange;
+    noshade;       
 }
 #form{
     border-radius: 20px;
@@ -162,8 +234,13 @@
     text-align: right;
     font-family: fantasy;
     font-size: 30;
-        margin-right: 20%;
+        margin-right: 49%;
   
+}
+hr{
+    width:90%;
+    color:darkorange;
+    noshade;       
 }
 #form{
     border-radius: 20px;
@@ -201,7 +278,7 @@
 }
 
 #image{
-    margin-left: 20%;
+    margin-left: 5%;
     line-height: 0px;
   
 }
@@ -209,8 +286,13 @@
     text-align: right;
     font-family: fantasy;
     font-size: 40;
-        margin-right: 25%;
-   
+    margin-right: 47%;
+    
+}
+hr{
+    width:90%;
+    color:darkorange;
+    noshade;       
 }
 #form{
     border-radius: 20px;
