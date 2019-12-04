@@ -1,5 +1,6 @@
 # jdproject
 ## Project Purpose
-##### This is aproject made by Mr. Siddharth Mishra during a one-month winter intern(from 01-12-2019 to 31-12-2019) at Jindal Steel & Power Limited.
+##### This is a project made by Mr. Siddharth Mishra during a one-month winter intern (from 01-12-2019 to 31-12-2019) while he was studying in the first year of his undergraduate programme(B.Tech at NIT Raipur) at Jindal Steel & Power Limited Raigarh. This project is made under the guidance and mentorship of Mr. Sambit Mishra(IT executive, JSPL Raigarh). This project could not have been possible without the interest and allowance of Mr. Virendra Sharma (HOD IT & SAP Department, JSPL Raigarh)
 ## Project Description
-##### This project includes 
+##### This project currently includes two HTML based pages which are connected to their respective CSS files. The Registration page is connected to a mySQL database working on an Apache server joined up using Xampp. This page is used to store data in the database. It currently includes five fields namely first name, last name, email, employee code and password; where employee code is a unique field that means this field should be unique for every row in the database. The second page is the login page that takes reference from the data stored on the database, checks it and gives access to the user to enter his/her profile only if the entered employee code and password are correct.
+
