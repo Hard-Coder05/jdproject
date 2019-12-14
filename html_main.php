@@ -56,6 +56,7 @@
             <th>PO Amount</th>
             <th>Current Status</th>
             <th>Responsible Person</th>
+                <th>Responsible Person Email-Id</th>
             <th>Remark</th>
             <th>Category</th>
             </tr></thead>
@@ -71,7 +72,7 @@ $result =$conn->query($sql);
 $number = $result->num_rows;
 if($number>0){
 while($row=$result->fetch_assoc()){
-    echo "<tr><td>".$row["work_id"]."</td><td>".$row["vendor_code"]."</td><td>".$row["service_provider"]."</td><td>".$row["work_order"]."</td><td>".$row["refer_num"]."</td><td>".$row["Service_from"]."</td><td>".$row["Service_to"]."</td><td>".$row["PO_amt"]."</td><td>".$row["Current_Status"]."</td><td>".$row["Responsible_Person"]."</td><td>".$row["Remark"]."</td><td>".$row["Category"]."</td></tr>"; 
+    echo "<tr><td>".$row["work_id"]."</td><td>".$row["vendor_code"]."</td><td>".$row["service_provider"]."</td><td>".$row["work_order"]."</td><td>".$row["refer_num"]."</td><td>".$row["Service_from"]."</td><td>".$row["Service_to"]."</td><td>".$row["PO_amt"]."</td><td>".$row["Current_Status"]."</td><td>".$row["Responsible_Person"]."</td><td>".$row["res_p_EMAIL"]."</td><td>".$row["Remark"]."</td><td>".$row["Category"]."</td></tr>"; 
 }
 echo "</table>"; 
 }
@@ -81,9 +82,11 @@ echo "0 result";
         ?>
             </tbody></table><br><br>
         <div id="footer"><br><p>Want to ADD New Work Orders?? <a class="abcd" href="html_add.php">Click Here</a></p><br>
-        <p>Want to DELETE a Work Order??<u>Copy the work id</u> for the further process...<a class="abcd" href="html_delete.php">Click Here</a></p><br>
-        <p>Want to EDIT a Work Order??<u>Copy the work id</u> for the further process...<a class="abcd" href="html_edit.php">Click Here</a></p><br>
-        <p>Send mail to the concerned people regarding the pending payments<a class="abcd" href="php_mail.php">Click Here</a></p><br>
+        <div id="footer"><br><p>Want to SEARCH a Work Orders?? <a class="abcd" href="html_search.php">Click Here</a></p><br>
+        <p>Want to EDIT a Work Order??<u>Copy the work id</u> for the further process<a class="abcd" href="html_edit.php">Click Here</a></p><br>
+            <p>Want to DELETE a Work Order??<u>Copy the work id</u> for the further process<a class="abcd" href="html_delete.php">Click Here</a></p><br>
+        <p>Send mail to ALL concerned people to pay attention to their Work Orders<a class="abcd" href="php_mail.php">Click Here</a></p><br>
+            <p>Send mail OF INTIMATION<a class="abcd" href="php_mail15.php">Click Here</a></p><br>
         <p>Want to Log Out?<a class="abcd" href="index.php">Click Here</a></p><br></div>
     </div>    
 </body>
