@@ -9,10 +9,11 @@ $Service_to =$_POST['Service_to'];
 $PO_amt = $_POST['PO_amt'];
 $Current_Status = $_POST['Current_Status'];
 $Responsible_Person = $_POST['Responsible_Person'];
+$res_p_EMAIL = $_POST['res_p_EMAIL'];
 $Remark = $_POST['Remark'];
 $Category = $_POST['Category'];
 
-if(!empty($work_id)||!empty($vendor_code)||!empty($service_provider)||!empty($work_order)||!empty($refer_num)||!empty($Service_form)||!empty($Service_to)||!empty($PO_amt)||!empty($Current_Status)||!empty($Responsible_Person)||!empty($Remark)||!empty($Category)){
+if(!empty($work_id)||!empty($vendor_code)||!empty($service_provider)||!empty($work_order)||!empty($refer_num)||!empty($Service_form)||!empty($Service_to)||!empty($PO_amt)||!empty($Current_Status)||!empty($Responsible_Person)||!empty($res_p_EMAIL)||!empty($Remark)||!empty($Category)){
     $host = "localhost";
     $dbUsername = "root";
     $dbPassword="";
@@ -26,7 +27,7 @@ if(!empty($work_id)||!empty($vendor_code)||!empty($service_provider)||!empty($wo
     
         
         $SELECT = "SELECT work_id From work_order Where work_id = ? Limit 1";
-        $INSERT = "INSERT Into work_order(work_id, vendor_code, service_provider, work_order, refer_num, Service_from, Service_to, PO_amt, Current_Status, Responsible_Person, Remark, Category) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $INSERT = "INSERT Into work_order(work_id, vendor_code, service_provider, work_order, refer_num, Service_from, Service_to, PO_amt, Current_Status, Responsible_Person, res_p_EMAIL, Remark, Category) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $SQL = "DELETE FROM work_order where work_id = '$work_id';";
         //Prepare statement
         $stmt = $conn->prepare($SELECT);
@@ -40,7 +41,7 @@ if(!empty($work_id)||!empty($vendor_code)||!empty($service_provider)||!empty($wo
             if ($conn->query($SQL) === TRUE) {
             $stmt->close();
             $stmt = $conn->prepare($INSERT);
-            $stmt->bind_param("isssississss", $work_id, $vendor_code, $service_provider, $work_order, $refer_num, $Service_from, $Service_to, $PO_amt, $Current_Status, $Responsible_Person, $Remark, $Category);
+            $stmt->bind_param("isssississsss", $work_id, $vendor_code, $service_provider, $work_order, $refer_num, $Service_from, $Service_to, $PO_amt, $Current_Status, $Responsible_Person, $res_p_EMAIL, $Remark, $Category);
             $stmt->execute();
             
             echo "Work Order edited sucessfully. Wait  you are being taken to the Work Order Portal.";
