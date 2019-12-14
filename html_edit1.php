@@ -85,6 +85,8 @@
                 <input type="text" name="Current_Status" style="width:90%; height: 30px;" value="<?php echo $row ["Current_Status"]; ?> "><br><br>
                 <label>Responsible Person</label><br>
                 <input type="text" name="Responsible_Person" style="width:90%; height: 30px;" value="<?php echo $row ["Responsible_Person"]; ?> "><br><br>
+                    <label>Responsible Person Email Id</label><br>
+                <input type="text" name="res_p_EMAIL" style="width:90%; height: 30px;" value="<?php echo $row ["res_p_EMAIL"]; ?> "><br><br>
                 <label>Remark</label><br>
                 <input type="text" name="Remark" style="width:90%; height: 30px;" value="<?php echo $row ["Remark"]; ?> "><br><br>
                 <label>Category</label><br>
