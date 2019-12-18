@@ -72,7 +72,21 @@ $result =$conn->query($sql);
 $number = $result->num_rows;
 if($number>0){
 while($row=$result->fetch_assoc()){
-    echo "<tr><td>".$row["work_id"]."</td><td>".$row["vendor_code"]."</td><td>".$row["service_provider"]."</td><td>".$row["work_order"]."</td><td>".$row["refer_num"]."</td><td>".$row["Service_from"]."</td><td>".$row["Service_to"]."</td><td>".$row["PO_amt"]."</td><td>".$row["Current_Status"]."</td><td>".$row["Responsible_Person"]."</td><td>".$row["res_p_EMAIL"]."</td><td>".$row["Remark"]."</td><td>".$row["Category"]."</td></tr>"; 
+    $now = time(); 
+                    $your_date = strtotime($row["Service_to"]);
+                    $difference = $your_date-$now;
+   if(round($difference / (60 * 60 * 24))<=15){
+    echo "<tr><td bgcolor=";
+        echo "yellow";
+        echo ">".$row["work_id"]."</td><td>".$row["vendor_code"]."</td><td>".$row["service_provider"]."</td><td>".$row["work_order"]."</td><td>".$row["refer_num"]."</td><td>".$row["Service_from"]."</td><td>".$row["Service_to"]."</td><td>".$row["PO_amt"]."</td><td>".$row["Current_Status"]."</td><td>".$row["Responsible_Person"]."</td><td>".$row["res_p_EMAIL"]."</td><td>".$row["Remark"]."</td><td>".$row["Category"]."</td></tr>"; }
+    if(round($difference / (60 * 60 * 24))>15){
+    echo "<tr><td bgcolor=";
+        echo "green";
+        echo ">".$row["work_id"]."</td><td>".$row["vendor_code"]."</td><td>".$row["service_provider"]."</td><td>".$row["work_order"]."</td><td>".$row["refer_num"]."</td><td>".$row["Service_from"]."</td><td>".$row["Service_to"]."</td><td>".$row["PO_amt"]."</td><td>".$row["Current_Status"]."</td><td>".$row["Responsible_Person"]."</td><td>".$row["res_p_EMAIL"]."</td><td>".$row["Remark"]."</td><td>".$row["Category"]."</td></tr>"; }
+    if(round($difference / (60 * 60 * 24))<0){
+    echo "<tr><td bgcolor=";
+        echo "red";
+        echo ">".$row["work_id"]."</td><td>".$row["vendor_code"]."</td><td>".$row["service_provider"]."</td><td>".$row["work_order"]."</td><td>".$row["refer_num"]."</td><td>".$row["Service_from"]."</td><td>".$row["Service_to"]."</td><td>".$row["PO_amt"]."</td><td>".$row["Current_Status"]."</td><td>".$row["Responsible_Person"]."</td><td>".$row["res_p_EMAIL"]."</td><td>".$row["Remark"]."</td><td>".$row["Category"]."</td></tr>"; }
 }
 echo "</table>"; 
 }
