@@ -2,7 +2,7 @@
 <head>
     <link rel="icon" href="download.jfif">
     <title>Work Order Portal | JSPL</title>
-    <link href="style_main.css" type="text/css" rel="stylesheet">
+    <link href="style_main.css?v=<?php echo time(); ?>" type="text/css" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -30,18 +30,28 @@
           images[4] = "image5.jpg";
           images[5] = "image_download.png";
       </script>
-    
-    
-    
 </head>
 <body>
+    <div class="navbar">
+            <a class="active" href="html_main.php">Home</a>
+            <a  href="html_add.php"> Add </a>
+            <a href="html_edit.php"> Edit </a>
+            <a  href="html_delete.php"> Delete </a>
+            <a  href="index.php"> LogOut </a>
+        </div>
+    <div class="navbar1"><p><center><b>Want to SEARCH a Work Order?? </b><a class="abcd" href="html_search.php">Click Here</a></center></p></div>
     <div id="full">
-    <div id="header"><p>Jindal Steel & Power Limited</p></div>
+    <div id="header">Jindal Steel & Power Limited</div>
     <div id="image1"><a href="https://www.jindalsteelpower.com/"><body onload = "startTimer()">
        <img id="img" src="image_download.png"/></a></div>
         <hr class="style-eight" />
-        
         <div id="header2"><p>Welcome to the Work Order Status Portal</p></div>
+        <br>
+        <div id="footer">
+        <p>Send mail to ALL concerned people to pay attention to their Work Orders<a class="abcd" href="php_mail.php">Click Here</a><br><br>
+       Send mail OF INTIMATION<a class="abcd" href="php_mail15.php">Click Here</a></p>
+            <br><br><br><br></div> 
+        
         
         <table class="table1">
             <thead>
@@ -94,14 +104,6 @@ else{
 echo "0 result";
 }
         ?>
-            </tbody></table><br><br>
-        <div id="footer"><br><p>Want to ADD New Work Orders?? <a class="abcd" href="html_add.php">Click Here</a></p><br>
-        <div id="footer"><br><p>Want to SEARCH a Work Orders?? <a class="abcd" href="html_search.php">Click Here</a></p><br>
-        <p>Want to EDIT a Work Order??<u>Copy the work id</u> for the further process<a class="abcd" href="html_edit.php">Click Here</a></p><br>
-            <p>Want to DELETE a Work Order??<u>Copy the work id</u> for the further process<a class="abcd" href="html_delete.php">Click Here</a></p><br>
-        <p>Send mail to ALL concerned people to pay attention to their Work Orders<a class="abcd" href="php_mail.php">Click Here</a></p><br>
-            <p>Send mail OF INTIMATION<a class="abcd" href="php_mail15.php">Click Here</a></p><br>
-        <p>Want to Log Out?<a class="abcd" href="index.php">Click Here</a></p><br></div>
-    </div>    
+            </tbody></table><br>  
 </body>
 </html>
