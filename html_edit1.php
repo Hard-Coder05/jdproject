@@ -2,7 +2,7 @@
 <head>
     <link rel="icon" href="download.jfif">
     <title>Work Order: Edit | JSPL</title>
-    <link href="style_edit.css" type="text/css" rel="stylesheet">
+    <link href="style_edit.css?v=<?php echo time(); ?>" type="text/css" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -59,41 +59,47 @@
 
         ?>
         
-        
-        <div id="form">
-                <br>
-                <form action="php_save.php" method="POST" >
+        <div id="form"><form action="php_save.php" method="POST" >
                     <label><center><b>WORK ORDER DETAILS</b></center></label><br><br>
                     <hr height="2 px">
-                <label>Work id</label><br>
-                <input type="text" name="work_id" style="width:90%; height: 30px; " value="<?php echo $row ["work_id"]; ?> "><br><br>
-                <label>Vendor Code</label><br>
-                <input type="text" name="vendor_code" style="width:90%; height: 30px;" value="<?php echo $row ["vendor_code"]; ?> "><br><br>
-                <label>Service Provider</label><br>
-                <input type="text" name="service_provider" style="width:90%; height: 30px;" value="<?php echo $row ["service_provider"]; ?> "><br><br>
-                <label>Work Order</label><br>
-                <input type="text" name="work_order" style="width:90%; height: 30px;" value="<?php echo $row ["work_order"]; ?> "><br><br>
-                <label>Reference Number</label><br>
-                <input type="text" name="refer_num" style="width:90%; height: 30px;" value="<?php echo $row ["refer_num"]; ?> "><br><br>
-                <label>Service from</label><br>
-                <input type="text" name="Service_from" style="width:90%; height: 30px;" value="<?php echo $row ["Service_from"]; ?> "><br><br>
-                <label>Service to</label><br>
-                <input type="text" name="Service_to" style="width:90%; height: 30px;" value="<?php echo $row ["Service_to"]; ?> "><br><br>
-                <label>PO Amount</label><br>
-                <input type="text" name="PO_amt" style="width:90%; height: 30px;" value="<?php echo $row ["PO_amt"]; ?> "><br><br>
-                <label>Current Status</label><br>
-                <input type="text" name="Current_Status" style="width:90%; height: 30px;" value="<?php echo $row ["Current_Status"]; ?> "><br><br>
-                <label>Responsible Person</label><br>
-                <input type="text" name="Responsible_Person" style="width:90%; height: 30px;" value="<?php echo $row ["Responsible_Person"]; ?> "><br><br>
-                    <label>Responsible Person Email Id</label><br>
-                <input type="text" name="res_p_EMAIL" style="width:90%; height: 30px;" value="<?php echo $row ["res_p_EMAIL"]; ?> "><br><br>
-                <label>Remark</label><br>
-                <input type="text" name="Remark" style="width:90%; height: 30px;" value="<?php echo $row ["Remark"]; ?> "><br><br>
-                <label>Category</label><br>
-                <input type="text" name="Category" style="width:90%; height: 30px;" value="<?php echo $row ["Category"]; ?> "><br><br>
-                <br><div id="button"><input type="Submit" value="SAVE" style="width: 90%; height: 50px; border-radius: 25px; border: none; font-family:cursive; font-size: 30px; background-color: azure;"></div>
+                    <table class="unstyledTable">
+<tbody>
+<tr>
+<td><label>Work id</label></td><td><label>Vendor Code</label></td></tr>
+<tr>
+<td><input type="text" name="work_id" style="width:90%; height: 30px; " value="<?php echo $row ["work_id"]; ?> " required></td><td><input type="text" name="vendor_code" style="width:90%; height: 30px;" value="<?php echo $row ["vendor_code"]; ?> " required></td></tr>
+<tr>
+<td><label>Service Provider</label></td><td><label>Work Order</label></td></tr>
+<tr>
+<td><input type="text" name="service_provider" style="width:90%; height: 30px;" value="<?php echo $row ["service_provider"]; ?> " required></td><td><input type="text" name="work_order" style="width:90%; height: 30px;" value="<?php echo $row ["work_order"]; ?> " required></td></tr>
+<tr>
+<td><label>Reference Number</label></td><td><label>PO Amount</label></td></tr>
+<tr>
+<td><input type="text" name="refer_num" style="width:90%; height: 30px;" value="<?php echo $row ["refer_num"]; ?> " required> </td> <td><input type="text" name="PO_amt" style="width:90%; height: 30px;" value="<?php echo $row ["PO_amt"]; ?> " required></td></tr>
+<tr>
+<td><label>Service from</label></td><td><label>Service to</label></td></tr>
+<tr>
+<td><input type="text" name="Service_from" style="width:90%; height: 30px;" value="<?php echo $row ["Service_from"]; ?> "></td><td><input type="text" name="Service_to" style="width:90%; height: 30px;" value="<?php echo $row ["Service_to"]; ?> "></td></tr>
+<tr>
+<td><label>Current Status</label></td><td> <label>Responsible Person</label></td></tr>
+<tr>
+<td><input type="text" name="Current_Status" style="width:90%; height: 30px;" value="<?php echo $row ["Current_Status"]; ?> " required></td><td><input type="text" name="Responsible_Person" style="width:90%; height: 30px;" value="<?php echo $row ["Responsible_Person"]; ?>" required></td></tr>
+<tr>
+<td><label>Responsible Person Email-Id</label></td><td><label>Remark</label></td></tr>
+<tr>
+<td><input type="text" name="res_p_EMAIL" style="width:90%; height: 30px;" value="<?php echo $row ["res_p_EMAIL"]; ?> " required></td><td><input type="text" name="Remark" style="width:90%; height: 30px;" value="<?php echo $row ["Remark"]; ?> " required></td></tr>
+    <tr>
+<td><label>Category</label></td></tr>
+    <tr>
+<td><input type="text" name="Category" style="width:90%; height: 30px;" value="<?php echo $row ["Category"]; ?> " required></td></tr>
+</tbody>
+
+                    </table>
+                <br><div id="button"><input type="Submit" value="Add Work Order" style="width: 90%; height: 50px; border-radius: 25px; border: none; font-family:cursive; font-size: 30px; background-color: azure;"></div>
             </form>
-        </div>
+        </div>        
+               
+                
         <?php
         }
 echo "</table>"; 
