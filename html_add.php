@@ -2,7 +2,7 @@
 <head>
     <link rel="icon" href="download.jfif">
     <title>Work Order:Add | JSPL</title>
-    <link href="style_add.css" type="text/css" rel="stylesheet">
+    <link href="style_add.css?v=<?php echo time(); ?>" type="text/css" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -83,51 +83,52 @@
         
         
         
-                <div id="form">
-                <br>
-                <form action="php_add.php" method="POST" >
+                <div id="form"><form action="php_add.php" method="POST" >
                     <label><center><b>WORK ORDER DETAILS</b></center></label><br><br>
                     <hr height="2 px">
-                <label>Work id</label><br>
-                <input type="text" name="work_id" style="width:90%; height: 30px; " required><br><br>
-                <label>Vendor Code</label><br>
-                <input type="text" name="vendor_code" style="width:90%; height: 30px;" required><br><br>
-                <label>Service Provider</label><br>
-                <input type="text" name="service_provider" style="width:90%; height: 30px;" required><br><br>
-                <label>Work Order</label><br>
-                <input type="text" name="work_order" style="width:90%; height: 30px;" required><br><br>
-                <label>Reference Number</label><br>
-                <input type="text" name="refer_num" style="width:90%; height: 30px;" required><br><br>
-                <label>Service from</label><br>
-                <select id="daydropdown" name="day">
+                    <table class="unstyledTable">
+<tbody>
+<tr>
+<td><label>Work id</label></td><td><label>Vendor Code</label></td></tr>
+<tr>
+<td><input type="text" name="work_id" style="width:90%; height: 30px; " required></td><td><input type="text" name="vendor_code" style="width:90%; height: 30px;" required></td></tr>
+<tr>
+<td><label>Service Provider</label></td><td><label>Work Order</label></td></tr>
+<tr>
+<td><input type="text" name="service_provider" style="width:90%; height: 30px;" required></td><td><input type="text" name="work_order" style="width:90%; height: 30px;" required></td></tr>
+<tr>
+<td><label>Reference Number</label></td><td><label>PO Amount</label></td></tr>
+<tr>
+<td><input type="text" name="refer_num" style="width:90%; height: 30px;" required></td><td><input type="text" name="PO_amt" style="width:90%; height: 30px;" required></td></tr>
+<tr>
+<td><label>Service from</label></td><td><label>Service to</label></td></tr>
+<tr>
+<td><select id="daydropdown" name="day">
                 </select> 
                 <select id="monthdropdown" name="month">
                 </select> 
                 <select id="yeardropdown" name="year">
-                </select>
-                    
-                <br><br>
-                <label>Service to</label><br>
-                <select id="daydropdown1" name="day1">
+                </select></td><td><select id="daydropdown1" name="day1">
                 </select> 
                 <select id="monthdropdown1" name="month1">
                 </select> 
                 <select id="yeardropdown1" name="year1">
-                </select>
-                    
-                <br><br>
-                <label>PO Amount</label><br>
-                <input type="text" name="PO_amt" style="width:90%; height: 30px;" required><br><br>
-                <label>Current Status</label><br>
-                <input type="text" name="Current_Status" style="width:90%; height: 30px;" required><br><br>
-                <label>Responsible Person</label><br>
-                <input type="text" name="Responsible_Person" style="width:90%; height: 30px;" required><br><br>
-                    <label>Responsible Person Email-Id</label><br>
-                <input type="text" name="res_p_EMAIL" style="width:90%; height: 30px;" required><br><br>
-                <label>Remark</label><br>
-                <input type="text" name="Remark" style="width:90%; height: 30px;" required><br><br>
-                <label>Category</label><br>
-                <input type="text" name="Category" style="width:90%; height: 30px;" required><br><br>
+                </select></td></tr>
+<tr>
+<td><label>Current Status</label></td><td> <label>Responsible Person</label></td></tr>
+<tr>
+<td><input type="text" name="Current_Status" style="width:90%; height: 30px;" required></td><td><input type="text" name="Responsible_Person" style="width:90%; height: 30px;" required></td></tr>
+<tr>
+<td><label>Responsible Person Email-Id</label></td><td><label>Remark</label></td></tr>
+<tr>
+<td><input type="text" name="res_p_EMAIL" style="width:90%; height: 30px;" required></td><td><input type="text" name="Remark" style="width:90%; height: 30px;" required></td></tr>
+    <tr>
+<td><label>Category</label></td></tr>
+    <tr>
+<td><input type="text" name="Category" style="width:90%; height: 30px;" required></td></tr>
+</tbody>
+</tr>
+                    </table>
                 <br><div id="button"><input type="Submit" value="Add Work Order" style="width: 90%; height: 50px; border-radius: 25px; border: none; font-family:cursive; font-size: 30px; background-color: azure;"></div>
             </form>
         </div>
